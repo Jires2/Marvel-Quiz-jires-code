@@ -33,7 +33,6 @@ export default function Login() {
     await login(email, password)
     .then((user) => {
       navigate('/welcome')
-      console.log(user)
     })
     .catch(error => {
       if (error.code === 'auth/user-not-found') {

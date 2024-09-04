@@ -42,6 +42,17 @@
   --dark-grey-color: #363636;
   --black-color: #333030;
   --deep-black-color: #000000;
+
+  /* Tooltip */
+  --rt-color-white: #fff;
+  --rt-color-dark: #222;
+  --rt-color-success: #8dc572;
+  --rt-color-error: #be6464;
+  --rt-color-warning: #f0ad4e;
+  --rt-color-info: #337ab7;
+  --rt-opacity: 0.9;
+  --rt-transition-show-delay: 0.15s;
+  --rt-transition-closing-delay: 0.15s;
 }
 
 * {
@@ -439,8 +450,6 @@ button[disabled]:hover {
   cursor: pointer;
 }
 
-
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -484,12 +493,20 @@ input:checked+.slider:before {
 }
 /* END LOGOUT SWITCH */
 
+/* TOOLTIPS */
+.logoutContainer .example-orange {
+  color: #ffffff;
+  background-color: var(--rt-color-dark);
+  opacity: .8;
+}
+/* END TOOLTIPS */
+
 /* LEVELS */
 .levelsContainer {
-  display: flex;
+  /* display: flex; */
   background-color: var(--light-grey-color);
   padding: 20px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .headingLevels {
@@ -755,7 +772,7 @@ input:checked+.slider:before {
 .modalBody {
   padding: 30px 10px;
   background: var(--white-color);
-  height: 400px;
+  /* height: 400px; */
   overflow: auto;
 
   display: flex;

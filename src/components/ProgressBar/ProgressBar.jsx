@@ -10,7 +10,7 @@ export default function ProgressBar({progressP, progressQ}) {
         </div>
 
         <div className="progressBar">
-            <div className="progressBarChange" style={{width:`${progressP}%`, transition:'all .3s, 300ms ease-in'}}></div>
+            <div className="progressBarChange" style={{width:`${progressP}%`, transition:'all .9s, 900ms ease-in'}}></div>
         </div>
     </>
   )

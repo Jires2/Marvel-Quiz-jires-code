@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { FirebaseContext } from '../Firebase/Context'
 import { useNavigate } from 'react-router-dom'
+import { Tooltip } from 'react-tooltip'
 
 export default function Logout({userData}) {
     const pseudo = !!userData ? (userData.pseudo):('')
@@ -27,6 +28,7 @@ export default function Logout({userData}) {
 
   return (
     <div className='logoutContainer' >
+        <Tooltip anchorSelect=".switch" className='example-orange' place="left">Deconnexion</Tooltip>
         <label htmlFor="" className='switch'>
             <input onChange={handleCahnge} type="checkbox" checked={checked} name="" id="" />
             <span className="slider round"></span>

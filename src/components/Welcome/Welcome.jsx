@@ -20,7 +20,6 @@ export default function Welcome () {
     })
     
     if (!!user && userData===null) {
-      console.log(user)
 
       const fetchData = async () => {
         try {
@@ -28,8 +27,7 @@ export default function Welcome () {
           const docSnap = await getDoc(docRef);
 
           if (docSnap.exists()) {
-            setUserData(docSnap.data());
-            console.log(userData)
+            setUserData(docSnap.data()); 
           } else {
             console.log('No such document!');
           }
@@ -45,7 +43,6 @@ export default function Welcome () {
 
   },[user, userData])
 
-
   return user === null ? (
     <>
       <div className="loader"></div>
@@ -55,7 +52,7 @@ export default function Welcome () {
     <div className='quiz-bg'>
       <div className="container">
         <Logout userData={userData}/> 
-        <Quiz />
+        <Quiz userData={userData} />
       </div>
     </div>
   )
